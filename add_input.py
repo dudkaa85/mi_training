@@ -1,9 +1,33 @@
-name = input("ведите ваше имя")
-print(name)
-yourLastName = input("ведите вашу фамилию")
-print(yourLastName)
-fatherSName = input("отчество")
-print(fatherSName )
-greetings = "Здравствуйте,HI",yourLastName,name,fatherSName
-print( greetings)
-  #этап 1 задание 3
+# name = input("ведите ваше имя")
+# print(name)
+# yourLastName = input("ведите вашу фамилию")
+# print(yourLastName)
+# fatherSName = input("отчество")
+# print(fatherSName )
+# greetings = "Здравствуйте,HI",yourLastName,name,fatherSName
+# print( greetings)
+#   #этап 1 задание 3
+
+# Запрашиваем у пользователя информацию
+username = input("Введите имя пользователя: ")
+content = input("Введите описание заметки: ")
+status = input("Введите статус заметки (например, 'Активна', 'Выполнена'): ")
+created_date = input("Введите дату создания заметки в формате 'день-месяц-год': ")
+issue_date = input("Введите дату истечения заметки в формате 'день-месяц-год': ")
+
+
+# Запрашиваем несколько заголовков и добавляем их в список
+title1 = input("Введите первый заголовок заметки: ")
+title2 = input("Введите второй заголовок заметки: ")
+title3 = input("Введите третий заголовок заметки: ")
+titles = [title1, title2, title3]
+
+
+# Выводим все данные
+print("\nВы ввели следующие данные:")
+print("Имя пользователя:", username)
+print("Заголовки заметки:", titles)
+print("Описание заметки:", content)
+print("Статус заметки:", status)
+print("Дата создания заметки:", created_date)
+print("Дата истечения заметки:", issue_date)
