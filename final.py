@@ -1,12 +1,27 @@
-import datetime
-now = datetime.datetime.now() #дата изменения или же сейчас
-creation_date = datetime.date(2024,12,11)#дата создания
 
-note = [input("введите имя"),input("введите заметку "),input("введите статус")]
-note.append(creation_date)
-note.append(now)
-title = ['Заголовок 1','заголовок 2']
+# Создаем словарь для хранения информации о заметке
+note = {}
 
-print(note,title)
+# Создаем словарь для хранения информации о заметке
+note = {}
 
 
+# Сбор данных от пользователя
+note["username"] = input("Введите имя пользователя: ")
+note["content"] = input("Введите описание заметки: ")
+note["status"] = input("Введите статус заметки (например, 'Активна', 'Выполнена'): ")
+note["created_date"] = input("Введите дату создания заметки в формате 'день-месяц-год': ")
+note["issue_date"] = input("Введите дату истечения заметки в формате 'день-месяц-год': ")
+
+
+# Добавляем заголовки в список внутри словаря
+note["titles"] = []
+for i in range(3):
+    title = input(f"Введите заголовок заметки {i + 1}: ")
+    note["titles"].append(title)
+
+
+# Выводим собранные данные
+print("\nСобранная информация о заметке:")
+for key, value in note.items():
+    print(f"{key.capitalize()}: {value}")
